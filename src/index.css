@@ -121,6 +121,22 @@ footer button{
     padding: 7px;
     border-radius: 7px;
     transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: none;
+}
+footer .exit{
+    cursor: pointer;
+      border: none;
+      background-color: rgb(88, 88, 224);
+      color: white;
+      padding: 7px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      display: none;
+}
+.footer .exit:hover{
+    background-color: black;
+      color: white;
 }
 footer button:hover{
     background-color: black;
@@ -160,6 +176,7 @@ color: white;
 padding: 7px;
 border-radius: 7px;
 transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+text-decoration: none;
 }
 .finally .content footer .quit-btn:hover{
   background-color: black;
