@@ -5,9 +5,189 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+      height: 100vh;
+        width: 100%;
+        background: rgb(88, 88, 224);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  max-width: 600px;
+  margin: auto;
+}
+.start{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(88, 88, 224);
+}
+.start button{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 7px;
+    border-radius: 7px;
+    transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.start button:hover{
+  background-color: black;
+  color: white;
+}
+header{
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+hr{
+  height: .5px;
+  border: none;
+  background-color: rgb(85, 83, 83);
+}
+.quiz{
+  padding: 7px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 0px #888888b0;
+  border-radius: 3px;
+}
+.quiz .counter{
+  gap:4px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 5px;
+  color: rgb(71, 69, 69);
+  background-color: rgb(106, 106, 207);
+}
+.quiz .counter span{
+  color: white;
+  padding: 3px 5px;
+  border-radius: 7px;
+  background-color: rgb(49, 45, 45);
+}
+.questions{
+  padding: 10px;
+}
+.questions h1{
+  margin: 0;
+  font-size: 18px;
+  padding: 8px;
+}
+.answers{
+  padding: 7px;
+}
+.answers .answer{
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(149, 228, 228, 0.568);
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border: 2px solid rgba(149, 228, 228, 0.952);
+}
+.answers .right{
+  cursor: pointer;
+    padding: 10px;
+    background-color: rgba(57, 230, 80, 0.616);
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 2px solid rgba(28, 238, 56, 0.952);
+}
+.answers .wrong {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(230, 57, 57, 0.616);
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border: 2px solid rgba(238, 28, 28, 0.952);
+}
+footer{
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer button{
+  cursor: pointer;
+    border: none;
+    background-color: rgb(88, 88, 224);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+footer button:hover{
+    background-color: black;
+      color: white;
+}
+.finally{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+.finally .content{
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+.finally .content i{
+  font-size: 70px;
+  padding: 10px;
+  color: rgb(88, 88, 224);
+}
+.finally .content .text{
+  padding: 10px;
+}
+.finally .content footer{
+  padding: 10px;
+  display: flex;
+  gap: 30px;
+}
+.finally .content footer .quit-btn,.finally .content footer .replay-btn{
+cursor: pointer;
+border: none;
+background-color: rgb(88, 88, 224);
+color: white;
+padding: 7px;
+border-radius: 7px;
+transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.finally .content footer .quit-btn:hover{
+  background-color: black;
+  color: white;
+}
+.finally .content footer .replay-btn:hover {
+  background-color: black;
+  color: white;
+}
+@media (max-width:329px) {
+  .finally{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        width: 100%;
+  }
+}
+@media (min-width:312px) and (max-width:579px){
+  .finally {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      width: 100%;
+    }
+}
+
+
