@@ -8,13 +8,19 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
     let answerTwo=React.useRef()
     let answerThree=React.useRef()
     let answerFour = React.useRef()
-    
+    let NextQ = React.useRef()
+    let Exit = React.useRef()
     function ClearInterval(){
         React.useEffect(() => {
             clearInterval(myinterval)
         })
     }
     function handelClick() {
+        if (Questions < Data.length) {
+            NextQ.current.style.display = "none"
+        } else {
+            NextQ.current.style.display = "none"
+        }
         clearInterval(myinterval)
         interval()
         setIntervall(15)
@@ -26,9 +32,6 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
         answerTwo.current.className ="answer"
         answerThree.current.className ="answer"
         answerFour.current.className ="answer"
-        if (Questions === Data.length) {
-            window.location.pathname="https://quiz-app-using-react.onrender.com/quizpage"
-        }
         ClearInterval()
     }
     function handelClickedAnswer() {
@@ -58,9 +61,12 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
         }
         clearInterval(myinterval)
         setIntervall(0)
-        if (Questions === Data.length) {
-            window.location.pathname="https://quiz-app-using-react.onrender.com/quizpage"
+        if (Questions < Data.length) {
+            NextQ.current.style.display = "block"
+        } else {
+            Exit.current.style.display = "block"
         }
+        
     }
 
     return (
@@ -83,7 +89,8 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
                 <div className="question-counter">
                     {Questions} of {Data.length} Questions
                 </div>
-                <button onClick={handelClick}>Next Que</button>
+                <button onClick={handelClick} ref={NextQ}>Next Que</button>
+                <Link to="/finally" className="exit" ref={Exit}><button onClick={handelClick}>Exit</button>Exit</Link>
             </footer>
         </div>
     )
