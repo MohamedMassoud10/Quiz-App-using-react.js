@@ -72,8 +72,8 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
     return (
         <div className="quiz">
             <header>
-            <div className="title">Awsome Quiz Appliction </div>
-                <div className="counter">Time Letf <span>{Interval}</span></div>
+            <div className="title">Awesome Appliction </div>
+                <div className="counter">Time Left <span>{Interval}</span></div>
             </header>
             <hr />
             <div className="questions">
