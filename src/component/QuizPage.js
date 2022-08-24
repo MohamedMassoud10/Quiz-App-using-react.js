@@ -27,7 +27,7 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
         answerThree.current.className ="answer"
         answerFour.current.className ="answer"
         if (Questions === Data.length) {
-            window.location.pathname="/finally"
+            window.location.pathname="https://quiz-app-using-react.onrender.com/quizpage"
         }
         ClearInterval()
     }
@@ -59,7 +59,7 @@ export default function QuizPage({myinterval,interval,Interval,setIntervall}) {
         clearInterval(myinterval)
         setIntervall(0)
         if (Questions === Data.length) {
-            window.location.pathname="/finally"
+            window.location.pathname="https://quiz-app-using-react.onrender.com/quizpage"
         }
     }
 
