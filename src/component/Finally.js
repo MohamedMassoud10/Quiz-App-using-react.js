@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Finally({ interval }) {
+export default function Finally({ interval,setIntervall }) {
         function handelClick() {
-        interval();
+            interval();
+            setIntervall(15)
     }
     return (
         <div className="finally">
@@ -10,8 +11,8 @@ export default function Finally({ interval }) {
                 <i class="fa-solid fa-crown"></i>
                 <div className="text">You've completed the Quiz ! and congarts !</div>
                 <footer>
-                <Link to="/"><button className="quit-btn">Quit Quiz</button></Link>
-                <Link to="/quizpage"><button className="replay-btn" onClick={handelClick}>Replay Quiz</button></Link>
+                <Link to="/" className="quit-btn">Quit Quiz</Link>
+                <Link to="/quizpage" className="quit-btn" onClick={handelClick}>Replay Quiz</Link>
                 </footer>
             </div>
         </div>
